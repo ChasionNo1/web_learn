@@ -5,6 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>文本属性</title>
+    <style>
+        .redis {
+            font:normal normal 16px 'Microsoft YaHei';
+            color: violet;
+            text-align: left;
+            text-decoration: underline;
+            line-height: normal;
+            text-indent: 2em;
+        }
+    </style>
 </head>
 <body>
     <!-- 
@@ -38,6 +48,7 @@
         属性值:
             px
      -->
+     <div class="redis">在redis-cli每次录入、查询键值，redis都会计算出该key应该送往的插槽，<br>如果不是该客户端对应服务器的插槽，redis会报错，并告知应前往的redis实例地址和端口。</div>
     
 </body>
 </html>

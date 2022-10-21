@@ -1,0 +1,8 @@
+/* 在css文件里只有样式，没有标签 */
+.control {
+    font: normal normal 25px '宋体';
+    color: aqua;
+    text-align: left;
+    text-indent: 2em;
+    line-height: normal;
+}
