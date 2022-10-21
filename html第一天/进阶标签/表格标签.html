@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格标签</title>
+</head>
+<body>
+    <!-- 
+        表格是实际开发中非常常用的标签:
+        1. 表格的主要作用
+            表格主要用于显示、展示数据
+        2. 表格的基本语法
+
+             <table>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+
+            <table> </table> 是用于定义表格的标签。
+            <tr> </tr> 标签用于定义表格中的行，必须嵌套在 <table> </table>标签中。
+            <td> </td> 用于定义表格中的单元格，必须嵌套在<tr></tr>标签中。
+            字母 td 指表格数据（table data），即数据单元格的内容。
+
+        3.  表头单元格标
+            一般表头单元格位于表格的第一行或第一列，表头单元格里面的文本内容加粗居中显示.
+            <th> 标签表示 HTML 表格的表头部分(table head 的缩写)
+        4.  表格属性
+            align           
+            border
+            cellpadding
+            cellspacing
+            width
+            heigth
+        5.  表格结构化标签
+            在表格标签中，分别用：<thead>标签 表格的头部区域、<tbody>标签 表格的主体区域. 这样可以更好的分清表格结构。
+                1. <thead></thead>：用于定义表格的头部。<thead> 内部必须拥有 <tr> 标签。 一般是位于第一行。
+                2. <tbody></tbody>：用于定义表格的主体，主要用于放数据本体 。
+                3. 以上标签都是放在 <table></table> 标签中。
+        
+        6.  合并单元格
+            特殊情况下,可以把多个单元格合并为一个单元格, 这里同学们会最简单的合并单元格即可
+            1. 合并单元格方式
+                跨行合并：rowspan="合并单元格的个数”
+                跨列合并：colspan="合并单元格的个数"
+
+            2. 目标单元格 写合并代码
+                跨行：最上侧单元格为目标单元格, 写合并代码 
+                跨列：最左侧单元格为目标单元格, 写合并代码
+            3. 合并单元格的步骤
+                1. 先确定是跨行还是跨列合并。
+                2. 找到目标单元格. 写上合并方式 = 合并的单元格数量。比如：<td colspan=“2”></td>。
+                3. 删除多余的单元格。
+
+     -->
+     <table>
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>电话</th>
+        </tr>
+        <tr>
+            <td>小王</td>
+            <td>女</td>
+            <td>110</td>
+        </tr>
+        <tr>
+            <td>小明</td>
+            <td>男</td>
+            <td>120</td>
+        </tr>
+     </table>
+
+     <table title="表格属性" align="center" border="1" cellpadding="10" cellspacing="0">
+        <thead>
+            <tr>
+                <th>属性名</th>
+                <th>属性值</th>
+                <th>描述</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>align</td>
+                <td>left/center/right</td>
+                <td>规定表格相对周围元素的对齐方式</td>
+            </tr>
+            <tr>
+                <td>border</td>
+                <td>1或者""</td>
+                <td>规定表格单元的边框，默认没有边框</td>
+            </tr>
+            <tr>
+                <td>cellpadding</td>
+                <td>像素值</td>
+                <td>规定单元边沿与其内容之间的空白，默认1像素</td>
+            </tr>
+            <tr>
+                <td>cellspacing</td>
+                <td>像素值</td>
+                <td>规定单元格之间的空白，默认2像素</td>
+            </tr>
+            <tr>
+                <td>width</td>
+                <td>像素值或者百分比</td>
+                <td>规定表格的宽度</td>
+            </tr>
+            <tr>
+                <td>heigth</td>
+                <td>像素值或者百分比</td>
+                <td>规定表格的高度</td>
+            </tr>
+        </tbody>
+        
+     </table>
+     <hr>
+     <table align="center" border="1" cellpadding="30" cellspacing="0" width="600">
+        <thead>
+            <tr>
+                <td colspan="5" align="center">个人简历</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>姓 名：</td>
+                <td></td>
+                <td>性 别：</td>
+                <td></td>
+                <td rowspan="4" align="center">照片</td>
+            </tr>
+            <tr>
+                <td>婚姻状况：</td>
+                <td></td>
+                <td>出生年月：</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>民族：</td>
+                <td></td>
+                <td>政治面貌：</td>
+                <td>  </td>           
+            </tr>
+            <tr>
+                <td>身高：</td>
+                <td></td>
+                <td>学历：</td>
+                <td></td>
+            </tr>
+
+        </tbody>
+     </table>
+</body>
+</html>
